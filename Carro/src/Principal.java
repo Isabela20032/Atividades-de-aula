@@ -15,7 +15,7 @@ public class Principal {
         seuCarro.fabricante = "Honda";
         seuCarro.modelo = "Civic";
         seuCarro.anoFab = 2009;
-        seuCarro.tipoDeCombustivel = "Preto";
+        seuCarro.cor = "Preto";
         seuCarro.flex = false;
         seuCarro.tipoDeCombustivel = "gasolina";
 
