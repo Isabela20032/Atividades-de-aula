@@ -1,6 +1,6 @@
-public class Cachorro{
+public class Gato{
     String nome;
-    String raca;
+    String raça;
     char sexo;
     int idade;
 
