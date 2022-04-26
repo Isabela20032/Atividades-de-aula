@@ -3,12 +3,12 @@ public class Passeio {
         Caminhada caminhada = new Caminhada();
 
         Cachorro dog = new Cachorro();
-        dog.nome = "Thor";
-        dog.raca = "Galgo Afegão";
+        dog.nome = "Haru";
+        dog.raca = "Vira-lata";
         dog.sexo = 'M';
     
         Pessoa pessoa = new Pessoa();
-        pessoa.nome = "Talles";
+        pessoa.nome = "Isabela";
         pessoa.cachorro = dog;
     
         caminhada.andar(pessoa);
