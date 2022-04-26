@@ -38,10 +38,9 @@ public class Principal {
         seuCarro.cor = "Preto";
         seuCarro.flex = false;
         seuCarro.tipoDeCombustivel = "gasolina";
-//        seuCarro.dono = dono;
+        // seuCarro.dono = dono;
         seuCarro.recebeProprietario(dono);
 
-        
         System.out.println("Seu carro");
         System.out.println("-------------------------------------------");
         System.out.println("Modelo: " + seuCarro.modelo);
