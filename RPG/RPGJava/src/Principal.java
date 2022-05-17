@@ -1,5 +1,9 @@
+import java.util.Random;
+
 public class Principal {
     public static void main(String[] args) {
+        Random dado = new Random();
+
         Guerreiro g = new Guerreiro();
         Mago m = new Mago();
         Arqueiro a = new Arqueiro();
@@ -18,8 +22,6 @@ public class Principal {
         g.mana = 63;
 
 
-        g.atacar(1);
-
         //Objeto Mago
         m.nome = "Agostinho Carrara";
         m.mana = 100;
@@ -30,6 +32,9 @@ public class Principal {
         m.inteligencia = 95;
         m.estamina = 45;
 
+
+
+
         //Objeto Arqueiro
         a.nome = "Jhoson";
         a.destreza = 90;
@@ -39,6 +44,29 @@ public class Principal {
         a.vida = 75;
         a.inteligencia = 60;
         a.mana = 60;
+        int round = 1;
+        while(g.vida > 0 && m.vida > 0){
+
+            System.out.println("Round: "+ round);
+            System.out.println("Oponente 1: " + g.nome);
+            System.out.println("Oponente 2: " + m.nome);
+
+            //Turno do mago(m)
+            int valorDado = dado.nextInt(6);
+            System.out.println("Valor do dado: " + valorDado);
+            int valorAtaque = m.atacar(valorDado);
+            g.defender(valorAtaque);
+
+            //Turno do guerreiro(g)
+            valorDado = dado.nextInt(6);
+            System.out.println("Valor do dado: " + valorDado);
+            valorAtaque = g.atacar(valorDado);
+            
+            m.defender(valorAtaque);
+
+            round++;
+        }
+    
 
 
 

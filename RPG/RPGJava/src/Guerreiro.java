@@ -23,5 +23,15 @@ public class Guerreiro{
         return valorAtaque;
     }
 
+    void defender(int valorDoAtaque){
+        if (valorDoAtaque <= this.resistencia){
+            System.out.println("O ataque foi defendido!");
+        }else{
+            int danoCausado = valorDoAtaque - this.resistencia;
+            System.out.println("O dano causado foi de: " + danoCausado);
+            this.vida -= danoCausado;
+        }
+    }
+
 
 }
