@@ -47,24 +47,49 @@ public class Principal {
         int round = 1;
         while(g.vida > 0 && m.vida > 0){
 
-            System.out.println("Round: "+ round);
+            System.out.println("-------------Round: "+ round + "-------------");
             System.out.println("Oponente 1: " + g.nome);
+            System.out.println("Vida: " + g.vida);
+
+            System.out.println("");
+
             System.out.println("Oponente 2: " + m.nome);
+            System.out.println("Vida: " + m.vida);
+
+            System.out.println("");
 
             //Turno do mago(m)
             int valorDado = dado.nextInt(6);
+            System.out.println("");
+
             System.out.println("Valor do dado: " + valorDado);
+            System.out.println("");
+
             int valorAtaque = m.atacar(valorDado);
+             System.out.println("");
+
             g.defender(valorAtaque);
 
             //Turno do guerreiro(g)
             valorDado = dado.nextInt(6);
             System.out.println("Valor do dado: " + valorDado);
+            System.out.println("");
+
             valorAtaque = g.atacar(valorDado);
+            System.out.println("");
             
             m.defender(valorAtaque);
 
+
             round++;
+
+            if(m.vida <= 0){
+                System.out.println("O guerreiro: " + g.nome +" ganhou!");
+            }else if(g.vida <= 0){
+                System.out.println("O mago: " + m.nome + " ganhou!");
+            }else{
+                System.out.println("Empate!");
+            }
         }
     
 
